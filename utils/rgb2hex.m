@@ -1,0 +1,6 @@
+function hex = rgb2hex(rgb)
+    % Convert RGB values (0-1) to hex color strings
+    hex = arrayfun(@(r, g, b) sprintf('#%02X%02X%02X', ...
+        round(r * 255), round(g * 255), round(b * 255)), ...
+        rgb(:, 1), rgb(:, 2), rgb(:, 3), 'UniformOutput', false);
+end
